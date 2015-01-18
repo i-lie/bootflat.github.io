@@ -1,0 +1,124 @@
+// Variables
+//------------------------------------------------------
+
+
+// Exports
+//------------------------------------------------------
+
+@include exports("button-group") {
+
+  /**
+   * button-group
+   * --------------------------------------------------
+   */
+  .btn-group {
+    & .btn,
+    & .btn:first-child {
+      border-left-color: $button-normal;
+    } 
+ 
+    @at-root &.open .btn-default.dropdown-toggle,
+    & .btn-default:first-child,
+    & .btn-default:focus,
+    & .btn-default:active,
+    & .btn-default.active {
+      border-left-color: $button-default;
+    }
+
+    & .btn-primary,
+    & .btn-primary:first-child,
+    & .btn-primary:focus,
+    & .btn-primary:active,
+    & .btn-primary.active {
+      border-left-color: $button-primary;
+    } 
+
+    & .btn-success,
+    & .btn-success:first-child,
+    & .btn-success:focus,
+    & .btn-success:active,
+    & .btn-success.active {
+      border-left-color: $button-success;
+    } 
+
+    & .btn-warning,
+    & .btn-warning:first-child,
+    & .btn-warning:focus,
+    & .btn-warning:active,
+    & .btn-warning.active {
+      border-left-color: $button-warning;
+    } 
+
+    & .btn-danger,
+    & .btn-danger:first-child,
+    & .btn-danger:focus,
+    & .btn-danger:active,
+    & .btn-danger.active {
+      border-left-color: $button-danger;
+    } 
+
+    & .btn-info,
+    & .btn-info:first-child,
+    & .btn-info:focus,
+    & .btn-info:active,
+    & .btn-info.active {
+      border-left-color: $button-info;
+    } 
+  }
+
+  .btn-group-vertical {
+    & .btn,
+    & .btn-group .btn-primary {
+      border-top-color: $button-normal !important;
+    }
+
+    & .btn-primary,
+    & .btn-primary:focus,
+    & .btn-primary:active,
+    & .btn-primary.active,
+    & .btn-group .btn-primary {
+      border-top-color: $button-primary !important;
+    } 
+
+    & .btn-success,
+    & .btn-success:focus,
+    & .btn-success:active,
+    & .btn-success.active,
+    & .btn-group .btn-success {
+      border-top-color: $button-success !important;
+    } 
+
+    & .btn-warning,
+    & .btn-warning:focus,
+    & .btn-warning:active,
+    & .btn-warning.active,
+    & .btn-group .btn-warning {
+      border-top-color: $button-warning !important;
+    } 
+
+    & .btn-danger,
+    & .btn-danger:focus,
+    & .btn-danger:active,
+    & .btn-danger.active,
+    & .btn-group .btn-danger {
+      border-top-color: $button-danger !important;
+    } 
+
+    & .btn-info,
+    & .btn-info:focus,
+    & .btn-info:active,
+    & .btn-info.active,
+    & .btn-group .btn-info {
+      border-top-color: $button-info !important;
+    }
+
+    & .btn:not(.btn-default):first-child,
+    & .btn-primary:first-child,
+    & .btn-success:first-child,
+    & .btn-warning:first-child, 
+    & .btn-danger:first-child,
+    & .btn-info:first-child {
+      border-top: 1px solid;
+    }     
+  }
+}

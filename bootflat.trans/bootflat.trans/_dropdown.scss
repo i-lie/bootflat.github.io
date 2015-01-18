@@ -1,0 +1,57 @@
+// Variables
+//------------------------------------------------------
+$dropdown-background-color:               $white !default;
+$dropdown-background-color-hover:         $darkgray-dark !default;
+
+$dropdown-normal:                         $mediumgray-dark !default;
+$dropdown-default:                        $white !default;
+
+$dropdown-divider-background-color:		  $global-border-color !default;
+$dropdown-padding:                        5px 20px !default;
+$dropdown-radius:                         4px !default;
+
+$dropdown-font-size:                      14px !default;
+$dropdown-font-color-dark:                $darkgray-dark !default;
+$dropdown-font-color-light:               $white !default;
+$dropdown-font-color-disabled:			  $mediumgray-light !default;
+$dropdown-font-weight:                    700 !default;
+
+// Exports
+//------------------------------------------------------
+
+@include exports("dropdown") {
+
+  /**
+   * dropdown-menu
+   * --------------------------------------------------
+   */
+  .dropdown-menu {
+      background-color: $dropdown-background-color;
+
+      & .dropdown-header {
+          color: $dropdown-normal;
+      }
+
+      & li a {
+          color: $dropdown-font-color-dark;
+      }
+      & li a:hover,
+      & li a:focus,
+      & .active a,
+      & .active a:hover,
+      & .active a:focus{
+          color: $dropdown-font-color-light;
+          background-color: $dropdown-background-color-hover;
+      }
+      & .disabled a,
+      & .disabled a:hover,
+      & .disabled a:focus {
+          color: $dropdown-font-color-disabled;
+      }
+      & .divider {
+          background-color: $dropdown-divider-background-color;
+      }
+  }
+}
+
+

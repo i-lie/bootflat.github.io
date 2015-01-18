@@ -1,0 +1,78 @@
+// Variables
+//------------------------------------------------------
+$breadcrumb-font-color:                        $global-font-color !default;
+$breadcrumb-link-color:                        $darkgray-dark !default;
+$breadcrumb-background-color:                  $white !default;
+
+$breadcrumb-arrow-radius:                      4px !default;
+$breadcrumb-arrow-font-color:                  $breadcrumb-font-color !default;
+$breadcrumb-arrow-background-color:            transparent !default;
+$breadcrumb-arrow-background-color-hover:      transparent !default;
+
+// Exports
+//------------------------------------------------------
+@include exports("breadcrumb") {
+
+  /**
+   * breadcrumb
+   * --------------------------------------------------
+   */
+  .breadcrumb {
+      color: $breadcrumb-font-color;
+      background-color: $breadcrumb-background-color;
+      & > .active {
+          color: $breadcrumb-font-color;
+      }
+      & a {
+          color: $breadcrumb-link-color;        
+      }
+  }
+
+  .breadcrumb-arrow {
+      background-color: $breadcrumb-background-color;
+
+      & li + li:before {
+          padding: 0 5px;
+          content: "> ";
+          color: $breadcrumb-font-color;
+      }
+      & li a,
+      & li:not(:first-child) span {
+          padding: 0 10px;
+      }
+      & li a {
+          border: 1px solid $breadcrumb-arrow-background-color;
+          color: $breadcrumb-arrow-font-color;
+          background-color: $breadcrumb-arrow-background-color;
+      }
+      & li a:before {
+          border-left-style: none;
+      }
+      & li a:after{
+		  border-left: 0px none;
+      }
+      & li a:hover,
+      & li a:focus {
+          background-color: $breadcrumb-arrow-background-color-hover;
+          border: 1px solid $breadcrumb-arrow-background-color-hover;
+          text-decoration: underline;
+      }
+      & li a:hover:before,
+      & li a:focus:before {
+          border-left-color: $breadcrumb-arrow-background-color-hover;
+      }
+      & li a:active {
+          background-color: darken($breadcrumb-arrow-background-color, 10%);
+          border: 1px solid darken($breadcrumb-arrow-background-color, 10%);
+      }
+      & li a:active:before,
+      & li a:active:after {
+          border-left-color: darken($breadcrumb-arrow-background-color, 10%);
+      }
+      & li span {
+          color: $breadcrumb-font-color;
+      }
+  }
+}
+
+

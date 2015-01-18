@@ -1,0 +1,155 @@
+// Variables
+//------------------------------------------------------
+$selecter-primary:                     $darkgray-dark !default;
+
+$selecter-border-color:                $mediumgray-dark !default;
+$selecter-background-color:            $white !default;
+$selecter-disabled-color:              $mediumgray-dark !default;
+$selecter-disabled-background-color:   $lightgray-dark !default;
+$selecter-radius-value:                $global-border-radius !default;
+$selecter-arrow-width:                 20px !default;
+
+$selecter-group-color:                 $mediumgray-dark !default;
+$selecter-group-background-color:      $lightgray-light !default;
+
+$selecter-item-border-color:		   $mediumgray-dark !default;
+$selecter-item-hover:		           $lightgray-dark !default;
+$selecter-item-selected:		       $darkgray-dark !default;
+$selecter-item-selected-border-color:  $darkgray-dark !default;
+
+
+// Exports
+//------------------------------------------------------
+
+@include exports("selecter") {
+	.selecter {
+
+		& .selecter-selected {
+			background-color: $selecter-background-color;
+			border: 1px solid $selecter-border-color;
+			@include radius($value: $selecter-radius-value);
+
+			&:after {
+				//border-top: 4px solid $black;
+				//border-left: 4px solid transparent;
+				//border-right: 4px solid transparent;
+			}
+		}
+		& .selecter-options {
+			border: 1px solid $selecter-border-color;
+			@include radius($value: 0 0 $selecter-radius-value $selecter-radius-value);
+			background-color: $selecter-background-color;
+		}
+		& .selecter-group {
+			border-bottom: 1px solid $selecter-item-border-color;
+			color: $selecter-group-color;
+			background-color: $selecter-group-background-color;
+		}
+		& .selecter-item {
+			background-color: $selecter-background-color;
+			border-bottom: 1px solid $selecter-item-border-color;
+
+			&.selected {
+				color: $white;
+				border-bottom-color: $selecter-item-selected-border-color;
+				background-color: $selecter-item-selected;
+			}
+			&.disabled {
+				color: $selecter-disabled-color;
+			}
+			&:last-child {
+				@include radius($value: 0 0 $selecter-radius-value $selecter-radius-value);
+			}
+		}
+
+		& .selecter-item:hover {
+			background-color: $selecter-item-hover;
+		}
+		& .selecter-item.selected:hover {
+			background-color: $selecter-item-selected;
+		}
+
+		& .selecter-item.disabled:hover,
+		&:hover .selecter-selected,
+		&.disabled .selecter-item:hover {
+			background-color: $selecter-background-color;
+		}
+
+		/* Open */
+		&.open {
+			& .selecter-selected {
+				border: 1px solid $selecter-primary;
+				@include radius($value: $selecter-radius-value $selecter-radius-value 0 0);
+			}
+		}
+
+		&.open .selecter-selected,
+		&.focus .selecter-selected {
+			background-color: $selecter-background-color;
+		}
+
+		/* 'Cover' Positioning */
+		&.cover {
+			& .selecter-options {
+				@include radius($value: $selecter-radius-value);
+
+				& .selecter-item.first {
+					@include radius($value: $selecter-radius-value $selecter-radius-value 0 0);
+				}
+
+			}
+
+			&.open .selecter-selected {
+				@include radius($value: $selecter-radius-value $selecter-radius-value 0 0);
+			}
+		}
+
+
+		/* 'Bottom' Positioning */
+		&.bottom {
+			&.open .selecter-selected {
+				@include radius($value: 0 0 $selecter-radius-value $selecter-radius-value);
+			}
+			&.open .selecter-options {
+				@include radius($value: $selecter-radius-value $selecter-radius-value 0 0);
+			}
+		}
+
+		/* 'Bottom' + 'Cover' Positioning */
+		&.bottom.cover {
+			&.open .selecter-selected,
+			&.open .selecter-options {
+				@include radius($value: $selecter-radius-value);
+			}
+		}
+
+
+		/* Multiple Select */
+		&.multiple .selecter-options {
+			@include radius($value: $selecter-radius-value);
+		}
+
+		/* 'Disabled' State */
+		&.disabled {
+			& .selecter-selected {
+				background-color: $selecter-disabled-background-color;
+				border-color: $selecter-disabled-background-color;
+				color: $selecter-disabled-color;
+			}
+			& .selecter-options {
+				background-color: $selecter-disabled-background-color;
+				border-color: $selecter-disabled-background-color;
+			}
+			& .selecter-group,
+			& .selecter-item {
+				background-color: $selecter-disabled-background-color;
+				border-color: $selecter-item-border-color;
+				color: $selecter-disabled-color;
+			}
+			& .selecter-item.selected {
+				background-color: $selecter-primary;
+				color: $white;
+			}
+		}
+	}
+}
