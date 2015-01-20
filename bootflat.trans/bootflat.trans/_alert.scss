@@ -1,0 +1,49 @@
+// Variables
+//------------------------------------------------------
+$alert-normal:					$button-normal !default;
+$alert-default:					$button-default !default;
+$alert-primary:                 $button-primary !default;
+$alert-success:                 $button-success !default;
+$alert-danger:                  $button-danger !default;
+$alert-warning:                 $button-warning !default;
+$alert-info:					$button-info !default;
+
+// Exports
+//------------------------------------------------------
+
+@include exports("alert") {
+
+	/**
+	 * alert
+	 * --------------------------------------------------
+	 */
+	.alert {
+		background-color: transparent;
+		border: $alert-normal $global-border-style $global-border-width;
+		
+		&-default {
+			background-color: transparent;
+			border: lighten($alert-default, 10%) $global-border-style $global-border-width;
+		}
+
+		&-info {
+			background-color: lighten($alert-primary, 10%);
+			border: lighten($alert-info, 10%) $global-border-style $global-border-width;
+		}
+		&-warning {
+			background-color: lighten($alert-warning, 10%);
+			border: lighten($alert-warning, 10%) $global-border-style $global-border-width;
+		}
+		&-danger {
+			background-color: lighten($alert-danger, 10%);
+			border: lighten($alert-danger, 10%) $global-border-style $global-border-width;
+		}
+		&-success {
+			background-color: lighten($alert-success, 10%);
+			border: lighten($alert-success, 10%) $global-border-style $global-border-width;
+		}
+	}
+
+}
+
+

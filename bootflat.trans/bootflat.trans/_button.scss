@@ -1,7 +1,7 @@
 // Variables
 //------------------------------------------------------
-$button-normal:                  $darkgray-dark !default;
-$button-default:                 $white !default;
+$button-normal:                  $mediumgray-light!default;
+$button-default:                 $darkgray-dark !default;
 $button-primary:                 $aqua-dark !default;
 $button-success:                 $grass-dark !default;
 $button-danger:                  $grapefruit-dark !default;
@@ -35,17 +35,25 @@ $button-trans-background:		 transparent;
   .btn {
   		background-color: $button-trans-background;
   		color: $button-font-color-dark;
+    	border-color: $button-normal;
+
+    	&:hover,
+    	&:focus,
+    	&:active,
+    	&.active {
+			color: $button-font-color-dark;
+    	}
   		
     	&.btn-default {
     		@extend .btn;
-	        border-color: $button-default-hover;
+	        border-color: $button-default;
     		
     		&:hover,
     		&:focus,
     		&:active,
     		&.active {
     			border-color: $white;
-    			background-color: $button-default-hover;
+    			background-color: $button-default;
     			color: $button-font-color-light;
     		}
     	}
@@ -114,20 +122,11 @@ $button-trans-background:		 transparent;
 	    		color: $button-font-color-light;
 	    	}
 	    }
-	    &.btn-normal {
-    		@extend .btn;
-	    	border-color: $button-normal;
-	    	
-	    	&:hover,
-	    	&:focus,
-	    	&:active,
-	    	&.active {
-	    		border-color: $white;
-	    		background-color: $button-normal;
-	    		color: $button-font-color-light;
-	    	}
+	    &.btn-link {
+			@extend .btn;
+			border-style: none;
 	    }
-    
+	
     @at-root .open .dropdown-toggle.btn-default {
         border-color: $button-default;
         background-color: $button-default-hover;      

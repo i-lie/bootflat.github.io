@@ -2,9 +2,12 @@
  * button
  * --------------------------------------------------
  */
-.btn, .btn.btn-default, .btn.btn-primary, .btn.btn-success, .btn.btn-danger, .btn.btn-warning, .btn.btn-info, .btn.btn-normal {
+.btn, .btn.btn-default, .btn.btn-primary, .btn.btn-success, .btn.btn-danger, .btn.btn-warning, .btn.btn-info, .btn.btn-link {
   background-color: transparent;
-  color: #434A54; }
+  color: #434A54;
+  border-color: #CCD1D9; }
+  .btn:hover, .btn:focus, .btn:active, .btn.active {
+    color: #434A54; }
   .btn.btn-default {
     border-color: #434A54; }
     .btn.btn-default:hover, .btn.btn-default:focus, .btn.btn-default:active, .btn.btn-default.active {
@@ -41,14 +44,10 @@
       border-color: #FFF;
       background-color: #37BC9B;
       color: #FFF; }
-  .btn.btn-normal {
-    border-color: #434A54; }
-    .btn.btn-normal:hover, .btn.btn-normal:focus, .btn.btn-normal:active, .btn.btn-normal.active {
-      border-color: #FFF;
-      background-color: #434A54;
-      color: #FFF; }
+  .btn.btn-link {
+    border-style: none; }
   .open .dropdown-toggle.btn-default {
-    border-color: #FFF;
+    border-color: #434A54;
     background-color: #434A54; }
 
 /**
@@ -56,9 +55,9 @@
  * --------------------------------------------------
  */
 .btn-group .btn, .btn-group .btn:first-child {
-  border-left-color: #434A54; }
+  border-left-color: #CCD1D9; }
 .btn-group.open .btn-default.dropdown-toggle, .btn-group .btn-default:first-child, .btn-group .btn-default:focus, .btn-group .btn-default:active, .btn-group .btn-default.active {
-  border-left-color: #FFF; }
+  border-left-color: #434A54; }
 .btn-group .btn-primary, .btn-group .btn-primary:first-child, .btn-group .btn-primary:focus, .btn-group .btn-primary:active, .btn-group .btn-primary.active {
   border-left-color: #3BAFDA; }
 .btn-group .btn-success, .btn-group .btn-success:first-child, .btn-group .btn-success:focus, .btn-group .btn-success:active, .btn-group .btn-success.active {
@@ -71,7 +70,7 @@
   border-left-color: #37BC9B; }
 
 .btn-group-vertical .btn, .btn-group-vertical .btn-group .btn-primary {
-  border-top-color: #434A54 !important; }
+  border-top-color: #CCD1D9 !important; }
 .btn-group-vertical .btn-primary, .btn-group-vertical .btn-primary:focus, .btn-group-vertical .btn-primary:active, .btn-group-vertical .btn-primary.active, .btn-group-vertical .btn-group .btn-primary {
   border-top-color: #3BAFDA !important; }
 .btn-group-vertical .btn-success, .btn-group-vertical .btn-success:focus, .btn-group-vertical .btn-success:active, .btn-group-vertical .btn-success.active, .btn-group-vertical .btn-group .btn-success {
@@ -105,6 +104,37 @@
     border-bottom-color: #FFF; }
   .popover.left .arrow, .popover.left .arrow:after {
     border-left-color: #FFF; }
+
+/**
+ * progress
+ * --------------------------------------------------
+ */
+.progress {
+  background-color: transparent; }
+  .progress-bar, .progress-bar-default {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #434A54; }
+  .progress-bar-normal {
+    border-color: #656D78;
+    background-color: #656D78;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+  .progress-bar-primary {
+    border-color: #4FC1E9;
+    background-color: #4FC1E9;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+  .progress-bar-success {
+    border-color: #A0D468; }
+  .progress-bar-info {
+    border-color: #48CFAD; }
+  .progress-bar-warning {
+    border-color: #FFCE54; }
+  .progress-bar-danger {
+    border-color: #ED5565; }
 
 /**
  * breadcrumb
@@ -260,6 +290,29 @@
   .selecter.disabled .selecter-item.selected {
     background-color: #434A54;
     color: #FFF; }
+
+/**
+ * alert
+ * --------------------------------------------------
+ */
+.alert {
+  background-color: transparent;
+  border: #CCD1D9 solid 1px; }
+  .alert-default {
+    background-color: transparent;
+    border: #5a6370 solid 1px; }
+  .alert-info {
+    background-color: #66c1e2;
+    border: #58ceb1 solid 1px; }
+  .alert-warning {
+    background-color: #f8cd73;
+    border: #f8cd73 solid 1px; }
+  .alert-danger {
+    background-color: #e26f7a;
+    border: #e26f7a solid 1px; }
+  .alert-success {
+    background-color: #a5ce78;
+    border: #a5ce78 solid 1px; }
 
 .navbar-default {
   background-color: #FFF;

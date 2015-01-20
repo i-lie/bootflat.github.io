@@ -1,42 +1,56 @@
 // Variables
 //------------------------------------------------------
-$progress-primary:                 $aqua-dark !default;
-$progress-success:                 $grass-dark !default;
-$progress-danger:                  $grapefruit-dark !default;
-$progress-warning:                 $sunflower-dark !default;
-$progress-info:                    $mint-dark !default;
+$progress-default:					$button-default-hover !default;
+$progress-normal:					$button-normal-hover !default;
+$progress-primary:                 $button-primary-hover !default;
+$progress-success:                 $button-success-hover !default;
+$progress-danger:                  $button-danger-hover !default;
+$progress-warning:                 $button-warning-hover !default;
+$progress-info:                    $button-info-hover !default;
 
-$progress-background-color:        $lightgray-dark !default;
+$progress-background-color:        transparent !default;
 
 // Exports
 //------------------------------------------------------
 @include exports("progress") {
 
-  /**
-   * progress
-   * --------------------------------------------------
-   */
-  .progress {
-      background-color: $progress-background-color;
-      @include box-shadow($value: none);
+	/**
+	 * progress
+	 * --------------------------------------------------
+	 */
+	.progress {
+		background-color: $progress-background-color;
 
-      &-bar {
-        background-color: $progress-primary;
-        @include box-shadow($value: none);
-      }
-      &-bar-success {
-        background-color: $progress-success;
-      }
-      &-bar-info {
-        background-color: $progress-info;
-      }
-      &-bar-warning {
-        background-color: $progress-warning;
-      }
-      &-bar-danger {
-        background-color: $progress-danger;
-      }
-  }
+		&-bar,
+		&-bar-default {
+			border-style: $global-border-style;
+			border-width: $global-border-width;
+			border-color: $progress-default;
+		}
+		
+		&-bar-normal {
+			border-color: $progress-normal;
+			background-color: $progress-normal;
+			@include box-shadow($value: none);
+		}
+		&-bar-primary {
+			border-color: $progress-primary;
+			background-color: $progress-primary;
+			@include box-shadow($value: none);
+		}
+		&-bar-success {
+			border-color: $progress-success;
+		}
+		&-bar-info {
+			border-color: $progress-info;
+		}
+		&-bar-warning {
+			border-color: $progress-warning;
+		}
+		&-bar-danger {
+			border-color: $progress-danger;
+		}
+	}
 }
 
 
