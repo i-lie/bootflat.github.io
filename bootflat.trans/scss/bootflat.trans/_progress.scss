@@ -1,0 +1,48 @@
+// Variables
+//------------------------------------------------------
+$progress-default:					$button-default !default;
+$progress-normal:					$button-normal !default;
+$progress-primary:                 $button-primary !default;
+$progress-success:                 $button-success !default;
+$progress-danger:                  $button-danger !default;
+$progress-warning:                 $button-warning !default;
+$progress-info:                    $button-info !default;
+
+$progress-background-color:        transparent !default;
+
+// Exports
+//------------------------------------------------------
+@include exports("progress") {
+
+	/**
+	 * progress
+	 * --------------------------------------------------
+	 */
+	.progress {
+		background-color: $progress-background-color;
+
+		&-bar {
+			background-color: $progress-normal;
+		}
+		&-bar-default {
+			background-color: $progress-default;
+		}
+		&-bar-primary {
+			background-color: $progress-primary;
+		}
+		&-bar-success {
+			background-color: $progress-success;
+		}
+		&-bar-info {
+			background-color: $progress-info;
+		}
+		&-bar-warning {
+			background-color: $progress-warning;
+		}
+		&-bar-danger {
+			background-color: $progress-danger;
+		}
+	}
+}
+
+

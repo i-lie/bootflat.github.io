@@ -1,0 +1,113 @@
+// Variables
+//------------------------------------------------------
+$panel-normal:                  $global-color-normal !default;
+$panel-default:                 $global-color-default !default;
+$panel-primary:                 $global-color-primary !default;
+$panel-success:                 $global-color-success !default;
+$panel-danger:                  $global-color-danger !default;
+$panel-warning:                 $global-color-warning !default;
+$panel-info:                    $global-color-info !default;
+
+$panel-font-color:              $global-font-color !default;
+
+$panel-background-color:        $white !default;
+
+
+// Exports
+//------------------------------------------------------
+
+@include exports("panel") {
+
+  /**
+   * panel
+   * --------------------------------------------------
+   */
+  .panel {
+    background-color: $panel-background-color;
+    border: $global-border-width $global-border-style $global-border-color;
+
+    & .list-group-item:first-child {
+      border-top: 1px solid $panel-normal;
+    }
+
+    &-title {
+      font-size: 14px;
+      color: $panel-font-color;
+      font-weight: normal;
+    }
+    &-footer {
+      background-color: $panel-normal;
+      border-top-color: $panel-normal;
+    }
+
+	& > .panel-heading {
+        color: $panel-font-color;
+        background-color: $panel-normal;
+        border-color: $panel-normal;
+	}
+	
+    @at-root &-default {
+      border-color: $panel-default;
+      & > .panel-heading {
+        color: $panel-font-color;
+        background-color: $panel-background-color;
+        border-color: $panel-default;
+      }
+    }
+    @at-root &-primary {
+      border-color: $panel-primary;
+      & > .panel-heading {
+        color: $panel-default;
+        background-color: $panel-primary;
+        border-color: $panel-primary;
+      }
+    }
+    @at-root &-success {
+      border-color: $panel-success;
+      & > .panel-heading {
+        color: $panel-default;
+        background-color: $panel-success;
+        border-color: $panel-success;
+      }
+    }
+    @at-root &-info {
+      border-color: $panel-info;
+      & > .panel-heading {
+        color: $panel-default;
+        background-color: $panel-info;
+        border-color: $panel-info;
+      }
+    }
+    @at-root &-warning {
+      border-color: $panel-warning;
+      & > .panel-heading {
+        color: $panel-default;
+        background-color: $panel-warning;
+        border-color: $panel-warning;
+      }
+    }
+    @at-root &-danger {
+      border-color: $panel-danger;
+      & > .panel-heading {
+        color: $panel-default;
+        background-color: $panel-danger;
+        border-color: $panel-danger;
+      }
+    }
+
+    @at-root &-primary > &-heading > &-title,
+    &-success > &-heading > &-title,
+    &-info > &-heading > &-title,
+    &-warning > &-heading > &-title,
+    &-danger > &-heading > &-title {
+      color: $panel-default;
+    }
+
+
+    & > &-body + .table,
+    & > &-body + .table-responsive {
+      border-top-color: $panel-normal;
+    }
+  }
+
+}

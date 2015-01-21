@@ -111,30 +111,20 @@
  */
 .progress {
   background-color: transparent; }
-  .progress-bar, .progress-bar-default {
-    border-style: solid;
-    border-width: 1px;
-    border-color: #434A54; }
-  .progress-bar-normal {
-    border-color: #656D78;
-    background-color: #656D78;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none; }
+  .progress-bar {
+    background-color: #CCD1D9; }
+  .progress-bar-default {
+    background-color: #434A54; }
   .progress-bar-primary {
-    border-color: #4FC1E9;
-    background-color: #4FC1E9;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none; }
+    background-color: #3BAFDA; }
   .progress-bar-success {
-    border-color: #A0D468; }
+    background-color: #8CC152; }
   .progress-bar-info {
-    border-color: #48CFAD; }
+    background-color: #37BC9B; }
   .progress-bar-warning {
-    border-color: #FFCE54; }
+    background-color: #F6BB42; }
   .progress-bar-danger {
-    border-color: #ED5565; }
+    background-color: #DA4453; }
 
 /**
  * breadcrumb
@@ -404,6 +394,67 @@
     color: white; }
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {
     color: #a9b0ba; } }
+
+/**
+ * panel
+ * --------------------------------------------------
+ */
+.panel {
+  background-color: #FFF;
+  border: 1px solid #E6E9ED; }
+  .panel .list-group-item:first-child {
+    border-top: 1px solid #CCD1D9; }
+  .panel-title {
+    font-size: 14px;
+    color: #434A54;
+    font-weight: normal; }
+  .panel-footer {
+    background-color: #CCD1D9;
+    border-top-color: #CCD1D9; }
+  .panel > .panel-heading {
+    color: #434A54;
+    background-color: #CCD1D9;
+    border-color: #CCD1D9; }
+  .panel-default {
+    border-color: #434A54; }
+    .panel-default > .panel-heading {
+      color: #434A54;
+      background-color: #FFF;
+      border-color: #434A54; }
+  .panel-primary {
+    border-color: #3BAFDA; }
+    .panel-primary > .panel-heading {
+      color: #434A54;
+      background-color: #3BAFDA;
+      border-color: #3BAFDA; }
+  .panel-success {
+    border-color: #8CC152; }
+    .panel-success > .panel-heading {
+      color: #434A54;
+      background-color: #8CC152;
+      border-color: #8CC152; }
+  .panel-info {
+    border-color: #37BC9B; }
+    .panel-info > .panel-heading {
+      color: #434A54;
+      background-color: #37BC9B;
+      border-color: #37BC9B; }
+  .panel-warning {
+    border-color: #F6BB42; }
+    .panel-warning > .panel-heading {
+      color: #434A54;
+      background-color: #F6BB42;
+      border-color: #F6BB42; }
+  .panel-danger {
+    border-color: #DA4453; }
+    .panel-danger > .panel-heading {
+      color: #434A54;
+      background-color: #DA4453;
+      border-color: #DA4453; }
+  .panel-primary > .panel-heading > .panel-title, .panel-success > .panel-heading > .panel-title, .panel-info > .panel-heading > .panel-title, .panel-warning > .panel-heading > .panel-title, .panel-danger > .panel-heading > .panel-title {
+    color: #434A54; }
+  .panel > .panel-body + .table, .panel > .panel-body + .table-responsive {
+    border-top-color: #CCD1D9; }
 
 /**
  * dropdown-menu
