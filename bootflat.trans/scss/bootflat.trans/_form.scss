@@ -1,21 +1,21 @@
 // Variables
 //------------------------------------------------------
-$form-normal:                      $mediumgray-dark !default;
-$form-default:                     $white !default;
-$form-primary:                     $aqua-dark !default;
-$form-success:                     $grass-dark !default;
-$form-danger:                      $grapefruit-dark !default;
-$form-warning:                     $sunflower-dark !default;
-$form-info:                        $mint-dark !default;
+$form-normal:                      $global-color-normal !default;
+$form-default:                     $global-color-default !default;
+$form-primary:                     $global-color-primary !default;
+$form-success:                     $global-color-success !default;
+$form-danger:                      $global-color-danger !default;
+$form-warning:                     $global-color-warning !default;
+$form-info:                        $global-color-info !default;
 
-$message-success:                  $grass-dark !default;
-$message-danger:                   $grapefruit-dark !default;
-$message-warning:                  $sunflower-dark !default;
+$message-success:                  $global-color-success !default;
+$message-danger:                   $global-color-danger !default;
+$message-warning:                  $global-color-warning !default;
 
-$form-font-color:                  $darkgray-dark !default;
-$form-placeholder-font-color:      $lightgray-dark !default;
+$form-font-color:                  $global-font-color !default;
+$form-placeholder-font-color:      $global-font-color-disabled !default;
 
-$form-disabled-color:              $lightgray-dark !default;
+$form-disabled-color:              $global-font-color-disabled !default;
 
 $search-query-value:               17px !default;
 
@@ -33,7 +33,7 @@ $search-icon-line-height:          30px !default;
    */
   .form-control {
       color: $form-font-color;
-      border-color: $form-normal;
+      border-color: $global-border-color;
 
       &,
       &:focus {

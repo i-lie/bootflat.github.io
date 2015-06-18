@@ -496,7 +496,7 @@ blockquote {
  */
 .form-control {
   color: #434A54;
-  border-color: #AAB2BD; }
+  border-color: #E6E9ED; }
   .form-control, .form-control:focus {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -504,17 +504,17 @@ blockquote {
   .form-control:focus {
     border-color: #3BAFDA; }
   .form-control::-moz-placeholder, .form-control:-ms-input-placeholder, .form-control::-webkit-input-placeholder {
-    color: #E6E9ED; }
+    color: #AAB2BD; }
   .form-control.disabled, .form-control[disabled] {
-    border-color: #E6E9ED;
-    background-color: #E6E9ED; }
+    border-color: #AAB2BD;
+    background-color: #AAB2BD; }
 
 .input-group-btn .btn + .btn {
   border-width: 1px;
   border-style: solid;
-  border-color: #96a0ad; }
+  border-color: #b8bfca; }
 .input-group-btn .btn + .btn.btn-default {
-  border-color: #ededed; }
+  border-color: #333940; }
 .input-group-btn .btn + .btn.btn-primary {
   border-color: #269ecb; }
 .input-group-btn .btn + .btn.btn-info {
@@ -527,9 +527,9 @@ blockquote {
   border-color: #d1293a; }
 
 .input-group-addon {
-  background-color: #AAB2BD;
-  border-color: #96a0ad;
-  color: #FFF; }
+  background-color: #CCD1D9;
+  border-color: #b8bfca;
+  color: #434A54; }
   .input-group-addon .radio, .input-group-addon .checkbox {
     margin: -3px 0 -4px !important; }
 
@@ -567,7 +567,7 @@ blockquote {
     line-height: 30px;
     text-align: center;
     font-size: 17px;
-    color: #E6E9ED;
+    color: #AAB2BD;
     z-index: 20; }
   .search-only .form-control:last-child {
     padding-left: 40px; }
