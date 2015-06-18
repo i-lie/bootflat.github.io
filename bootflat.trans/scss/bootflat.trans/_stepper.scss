@@ -1,7 +1,7 @@
 // Variables
 //------------------------------------------------------
-$stepper-primary:                     $aqua-dark !default;
-$stepper-primary-hover:               $aqua-light !default;
+$stepper-primary:                     transparent !default;
+$stepper-primary-hover:               $global-color-default !default;
 
 $stepper-arrow-width:                 20px !default;
 
@@ -41,6 +41,13 @@ $stepper-arrow-width:                 20px !default;
 		&:active {
 			background-color: $stepper-primary-hover;
 		}
+		
+		&:hover.up:before {
+			border-bottom-color: $global-font-color-light;
+		}
+		&:hover.down:before {
+			border-top-color: $global-font-color-light;
+		}
 	}
 	& .up {
 		@include prefixer($property: border-top-right-radius, $value: 3px, $prefixes: webkit moz spec);
@@ -63,16 +70,28 @@ $stepper-arrow-width:                 20px !default;
 	& .up::before {
 		top: 5px;
 		left: 5px;
-		border-bottom: 4px solid $white;
+		border-bottom: 4px solid $stepper-primary-hover;
 	}
 	& .down:before {
 		bottom: 5px;
 		left: 6px;
-		border-top: 4px solid $white;
+		border-top: 4px solid $stepper-primary-hover;
 	}
 	&.disabled .stepper-arrow {
 		background-color: $stepper-primary;
 		@include opacity($opacity: 45, $filter: true);
+		
+		&.up,
+		&.down {
+			cursor: not-allowed;
+		}
+		
+		&:hover.up:before {
+			border-bottom-color: $stepper-primary-hover;
+		}
+		&:hover.down:before {
+			border-top-color: $stepper-primary-hover;
+		}
 	}
   }
 

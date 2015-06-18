@@ -1,8 +1,9 @@
 // Variables
 //------------------------------------------------------
 $popover-background-color:               $white !default;
-$popover-font-color:                     $darkgray-dark !default;
-$popover-title-font-color:               $darkgray-dark !default;
+$popover-font-color:                     $global-font-color !default;
+$popover-title-font-color:               $global-font-color !default;
+$popover-border-color:					 $popover-font-color !default;
 
 
 // Exports
@@ -18,28 +19,29 @@ $popover-title-font-color:               $darkgray-dark !default;
   .popover {
       background-color: $popover-background-color;
       color: $popover-font-color;
-      border-color: $popover-background-color;
+      border-color: $popover-border-color;
 
       @at-root &-title {
+          font-weight: bold;
           color: $popover-title-font-color;
-		  border-bottom: 1px solid $lightgray-dark;
-		  padding-bottom: 8px;
+          background-color: transparent;
+          border-bottom: $global-border-width $global-border-style $popover-border-color;
       }
       &.top .arrow,
       &.top .arrow:after {
-          border-top-color: $popover-background-color;
+          border-top-color: $popover-border-color;
       }
       &.right .arrow,
       &.right .arrow:after {
-          border-right-color: $popover-background-color;
+          border-right-color: $popover-border-color;
       }
       &.bottom .arrow,
       &.bottom .arrow:after {
-          border-bottom-color: $popover-background-color;
+          border-bottom-color: $popover-border-color;
       }
       &.left .arrow,
       &.left .arrow:after {
-          border-left-color: $popover-background-color;
+          border-left-color: $popover-border-color;
       }
   }
 

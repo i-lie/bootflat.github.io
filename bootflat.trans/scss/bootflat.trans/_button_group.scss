@@ -1,7 +1,3 @@
-// Variables
-//------------------------------------------------------
-
-
 // Exports
 //------------------------------------------------------
 
@@ -12,12 +8,16 @@
    * --------------------------------------------------
    */
   .btn-group {
+    @at-root &.open .dropdown-toggle {
+        @include box-shadow($value: inset 0 1px 2px rgba(0, 0, 0, .125));
+    }     
+
     & .btn,
     & .btn:first-child {
       border-left-color: $button-normal;
     } 
  
-    @at-root &.open .btn-default.dropdown-toggle,
+    & .btn-default,
     & .btn-default:first-child,
     & .btn-default:focus,
     & .btn-default:active,
@@ -67,58 +67,79 @@
   }
 
   .btn-group-vertical {
-    & .btn,
-    & .btn-group .btn-primary {
-      border-top-color: $button-normal !important;
-    }
+    & .btn {
+      border-top-color: $button-normal;
+    } 
+
+    & .btn-default,
+    & .btn-default:first-child,
+    & .btn-default:focus,
+    & .btn-default:active,
+    & .btn-default.active,
+    & .btn-group .btn-default {
+      border-top-color: $button-default;
+    } 
 
     & .btn-primary,
+    & .btn-primary:first-child,
     & .btn-primary:focus,
     & .btn-primary:active,
     & .btn-primary.active,
     & .btn-group .btn-primary {
-      border-top-color: $button-primary !important;
+      border-top-color: $button-primary;
     } 
 
     & .btn-success,
+    & .btn-success:first-child,
     & .btn-success:focus,
     & .btn-success:active,
     & .btn-success.active,
     & .btn-group .btn-success {
-      border-top-color: $button-success !important;
+      border-top-color: $button-success;
     } 
 
     & .btn-warning,
+    & .btn-warning:first-child,
     & .btn-warning:focus,
     & .btn-warning:active,
     & .btn-warning.active,
     & .btn-group .btn-warning {
-      border-top-color: $button-warning !important;
+      border-top-color: $button-warning;
     } 
 
     & .btn-danger,
+    & .btn-danger:first-child,
     & .btn-danger:focus,
     & .btn-danger:active,
     & .btn-danger.active,
     & .btn-group .btn-danger {
-      border-top-color: $button-danger !important;
+      border-top-color: $button-danger;
     } 
 
     & .btn-info,
+    & .btn-info:first-child,
     & .btn-info:focus,
     & .btn-info:active,
     & .btn-info.active,
     & .btn-group .btn-info {
-      border-top-color: $button-info !important;
-    }
-
+      border-top-color: $button-info;
+    } 
+/*
     & .btn:not(.btn-default):first-child,
     & .btn-primary:first-child,
     & .btn-success:first-child,
     & .btn-warning:first-child, 
     & .btn-danger:first-child,
     & .btn-info:first-child {
-      border-top: 1px solid;
+      border-top: $global-border-width $global-border-style;
     }     
+*/
   }
+
 }
+
+
+
+
+
+

@@ -1,13 +1,18 @@
 // Variables
 //------------------------------------------------------
 $breadcrumb-font-color:                        $global-font-color !default;
-$breadcrumb-link-color:                        $darkgray-dark !default;
-$breadcrumb-background-color:                  $white !default;
+$breadcrumb-link-color:                        $breadcrumb-font-color !default;
+$breadcrumb-background-color:                  transparent !default;
 
-$breadcrumb-arrow-radius:                      4px !default;
-$breadcrumb-arrow-font-color:                  $breadcrumb-font-color !default;
-$breadcrumb-arrow-background-color:            transparent !default;
-$breadcrumb-arrow-background-color-hover:      transparent !default;
+$breadcrumb-arrow-radius:                      $global-border-radius !default;
+
+$breadcrumb-arrow-font-color:                  $global-font-color-light !default;
+$breadcrumb-arrow-background-color:            $global-color-default !default;
+$breadcrumb-arrow-border-color:				   $breadcrumb-arrow-background-color !default;
+
+$breadcrumb-arrow-font-color-hover:			   $breadcrumb-arrow-background-color !default;
+$breadcrumb-arrow-background-color-hover:      $breadcrumb-arrow-font-color !default;
+$breadcrumb-arrow-border-color-hover:		   $breadcrumb-arrow-background-color !default;
 
 // Exports
 //------------------------------------------------------
@@ -24,38 +29,86 @@ $breadcrumb-arrow-background-color-hover:      transparent !default;
           color: $breadcrumb-font-color;
       }
       & a {
-          color: $breadcrumb-link-color;        
+          color: $breadcrumb-link-color;
+          text-decoration: underline;  
+      }
+      & > li + li:before {
+		  color: $breadcrumb-font-color;
       }
   }
 
   .breadcrumb-arrow {
+      padding: 0;
+      list-style: none;
       background-color: $breadcrumb-background-color;
+      height: 36px;
+      line-height: 36px;
 
+      & li:first-child a {
+          @include radius($type: border-radius, $value: $breadcrumb-arrow-radius 0 0 $breadcrumb-arrow-radius);
+      }
+      & li,
+      & li a,
+      & li span{
+          display: inline-block;
+          vertical-align: top;
+      }
+      & li:not(:first-child) {
+          margin-left: -5px;
+      }
       & li + li:before {
-          padding: 0 5px;
-          content: "> ";
-          color: $breadcrumb-font-color;
+          padding: 0;
+          content: "";
+      }
+      & li span {
+          padding: 0 10px;
       }
       & li a,
       & li:not(:first-child) span {
+          padding: 0 10px 0 25px;
+          height: 36px;
+          line-height: 36px;
+      }
+      & li:first-child a {
           padding: 0 10px;
       }
       & li a {
-          border: 1px solid $breadcrumb-arrow-background-color;
+          position: relative;
+          border: 1px solid $breadcrumb-arrow-border-color;
           color: $breadcrumb-arrow-font-color;
           background-color: $breadcrumb-arrow-background-color;
+          text-decoration: none;
+      }
+      & li:first-child a {
+          padding-left: 10px;
+      }
+      & li a:before,
+      & li a:after {
+          position: absolute;
+          top: -1px;
+          content: '';
+          width: 0;
+          height: 0;
+          border-top: 18px solid transparent;
+          border-bottom: 18px solid transparent;
       }
       & li a:before {
-          border-left-style: none;
+          right: -10px;
+          border-left-width: 11px;
+          border-left-style: solid;
+          border-left-color: $breadcrumb-arrow-border-color;
+          z-index: 3;
       }
       & li a:after{
-		  border-left: 0px none;
+          right: -11px;
+          border-left: 11px solid darken($breadcrumb-arrow-border-color, 10%);
+          z-index: 2;
       }
       & li a:hover,
       & li a:focus {
           background-color: $breadcrumb-arrow-background-color-hover;
-          border: 1px solid $breadcrumb-arrow-background-color-hover;
-          text-decoration: underline;
+          border: 1px solid $breadcrumb-arrow-border-color-hover;
+          color: $breadcrumb-arrow-font-color-hover;
       }
       & li a:hover:before,
       & li a:focus:before {

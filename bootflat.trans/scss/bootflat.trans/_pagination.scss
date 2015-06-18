@@ -1,13 +1,12 @@
 // Variables
 //------------------------------------------------------
-$pagination-border-color:						$global-border-color !default;
+$pagination-background-color:                  transparent !default;
+$pagination-background-color-hover:            $global-font-color !default;
+$pagination-background-color-active:           $global-font-color !default;
 
-$pagination-background-color:					$white !default;
-$pagination-background-color-hover:				$darkgray-dark !default;
-
-$pagination-font-color:							$darkgray-dark !default;
-$pagination-font-color-hover:					$white !default;
-$pagination-font-color-disabled:				$lightgray-dark !default;
+$pagination-font-color:                        $global-font-color !default;
+$pagination-font-color-hover:                  $white !default;
+$pagination-font-color-disabled:               $global-font-color-disabled !default;
 
 // Exports
 //------------------------------------------------------
@@ -19,11 +18,12 @@ $pagination-font-color-disabled:				$lightgray-dark !default;
    * --------------------------------------------------
    */
   .pagination {
+
     & > li > a,
     & > li > span {
       color: $pagination-font-color;
       background-color: $pagination-background-color;
-      border-color: $pagination-border-color;
+      border-color: $pagination-background-color-hover;
     }
     & > li > a:hover,
     & > li > span:hover,
@@ -40,8 +40,8 @@ $pagination-font-color-disabled:				$lightgray-dark !default;
     & > .active > a:focus,
     & > .active > span:focus {
       color: $pagination-font-color-hover;
-      background-color: $pagination-background-color-hover;
-      border-color: $pagination-background-color-hover;
+      background-color: $pagination-background-color-active;
+      border-color: $pagination-background-color-active;
     }
     & > .disabled > span,
     & > .disabled > span:hover,
@@ -51,7 +51,7 @@ $pagination-font-color-disabled:				$lightgray-dark !default;
     & > .disabled > a:focus {
       color: $pagination-font-color-disabled;
       background-color: $pagination-background-color;
-      border-color: $pagination-border-color;
+      border-color: $pagination-background-color-hover;
     }
   }
 }

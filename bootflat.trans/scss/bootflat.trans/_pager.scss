@@ -1,0 +1,44 @@
+// Variables
+//------------------------------------------------------
+$pager-background-color:                  transparent !default;
+$pager-background-color-hover:            $global-font-color !default;
+
+$pager-font-color:                        $global-font-color !default;
+$pager-font-color-hover:				  $global-font-color-light !default;
+$pager-font-color-disabled:               $global-font-color-disabled !default;
+
+// Exports
+//------------------------------------------------------
+
+@include exports("pager") {
+
+  /**
+   * pager
+   * --------------------------------------------------
+   */
+  .pager {
+
+    & li > a,
+    & li > span {
+      color: $pager-font-color;
+      background-color: $pager-background-color;
+      border-color: $pager-font-color;
+    }
+    & li > a:hover,
+    & li > a:focus {
+      background-color: $pager-background-color-hover;
+      border-color: $pager-background-color-hover;
+      color: $pager-font-color-hover;
+    }
+    & .disabled > a,
+    & .disabled > a:hover,
+    & .disabled > a:focus,
+    & .disabled > span {
+      color: $pager-font-color-disabled;
+      border-color: $pager-font-color-disabled;
+      background-color: $pager-background-color;
+    }
+  }
+}
+
+

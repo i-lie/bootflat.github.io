@@ -1,14 +1,12 @@
 // Variables
 //------------------------------------------------------
-$label-normal:                  $mediumgray-dark !default;
-$label-default:                 $white !default;
-$label-primary:                 $aqua-dark !default;
-$label-success:                 $grass-dark !default;
-$label-danger:                  $grapefruit-dark !default;
-$label-warning:                 $sunflower-dark !default;
-$label-info:                    $mint-dark !default;
-
-$label-default-font-color:      $darkgray-dark !default;
+$label-normal:                  $global-color-normal !default;
+$label-default:                 $global-color-default !default;
+$label-primary:                 $global-color-primary !default;
+$label-success:                 $global-color-success !default;
+$label-danger:                  $global-color-danger !default;
+$label-warning:                 $global-color-warning !default;
+$label-info:                    $global-color-info !default;
 
 // Exports
 //------------------------------------------------------
@@ -21,44 +19,47 @@ $label-default-font-color:      $darkgray-dark !default;
    */
   .label,
   .badge {
-    background-color: $label-normal;
+	border-width: 1px;
+	border-style: solid;
+	border-color: $label-normal;
+	color: $label-normal;
+    background-color: transparent;
   }
 
   .label-default,
   .badge-default {
-    border: 1px solid $button-normal;
-    background-color: $label-default;
-    color: $label-default-font-color;
+    border-color: $label-default;
+    color: $label-default;
   }
 
   .label-primary,
   .badge-primary {
     border-color: $label-primary;
-    background-color: $label-primary;
+    color: $label-primary;
   }
 
   .label-success,
   .badge-success {
     border-color: $label-success;
-    background-color: $label-success;
+    color: $label-success;
   }
 
   .label-danger,
   .badge-danger {
     border-color: $label-danger;
-    background-color: $label-danger;
+    color: $label-danger;
   }
 
   .label-warning,
   .badge-warning {
     border-color: $label-warning;
-    background-color: $label-warning;
+    color: $label-warning;
   }
 
   .label-info,
   .badge-info {
     border-color: $label-info;
-    background-color: $label-info;
+    color: $label-info;
   }
 }
 
