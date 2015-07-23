@@ -3,6 +3,7 @@
 $pagination-background-color:                  transparent !default;
 $pagination-background-color-hover:            $global-font-color !default;
 $pagination-background-color-active:           $global-font-color !default;
+$pagination-border-color:					   $pagination-background-color-hover !default;
 
 $pagination-font-color:                        $global-font-color !default;
 $pagination-font-color-hover:                  $white !default;
@@ -23,7 +24,7 @@ $pagination-font-color-disabled:               $global-font-color-disabled !defa
     & > li > span {
       color: $pagination-font-color;
       background-color: $pagination-background-color;
-      border-color: $pagination-background-color-hover;
+      border-color: $pagination-border-color;
     }
     & > li > a:hover,
     & > li > span:hover,
@@ -51,7 +52,7 @@ $pagination-font-color-disabled:               $global-font-color-disabled !defa
     & > .disabled > a:focus {
       color: $pagination-font-color-disabled;
       background-color: $pagination-background-color;
-      border-color: $pagination-background-color-hover;
+      border-color: $pagination-border-color;
     }
   }
 }

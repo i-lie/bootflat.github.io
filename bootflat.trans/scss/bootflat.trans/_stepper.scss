@@ -16,6 +16,8 @@ $stepper-arrow-width:                 20px !default;
    * --------------------------------------------------
    */
   .stepper {
+	position: relative;
+  
 	& .stepper-input {
 		overflow: hidden;
 		-moz-appearance: textfield;
@@ -33,7 +35,7 @@ $stepper-arrow-width:                 20px !default;
 		display: block;
 		height: 50%;
 		position: absolute;
-		right: 15px;
+		right: 0px;
 		text-indent: -99999px;
 		width: $stepper-arrow-width;
 

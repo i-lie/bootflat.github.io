@@ -2,6 +2,7 @@
 //------------------------------------------------------
 $selecter-primary:                     $global-color-default !default;
 
+$selecter-placeholder-font-color:      $global-font-color-disabled !default;
 $selecter-border-color:                $global-border-color !default;
 $selecter-background-color:            $white !default;
 $selecter-disabled-color:              $global-font-color-disabled !default;
@@ -70,6 +71,10 @@ $selecter-item-font-hover:				$global-font-color-light !default;
 				border-top: 4px solid $selecter-primary;
 				border-left: 4px solid transparent;
 				border-right: 4px solid transparent;
+			}
+			
+			&.placeholder {
+				color: $selecter-placeholder-font-color;
 			}
 		}
 		& .selecter-options {

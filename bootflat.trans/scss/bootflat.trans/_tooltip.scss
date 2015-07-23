@@ -1,7 +1,8 @@
 // Variables
 //------------------------------------------------------
-$tooltip-background-color:               $darkgray-dark !default;
-$tooltip-font-color:                     $white !default;
+$tooltip-background-color:               $white !default;
+$tooltip-font-color:                     $global-font-color !default;
+$tooltip-border-color:					 $tooltip-font-color !default;
 
 
 // Exports
@@ -18,22 +19,24 @@ $tooltip-font-color:                     $white !default;
     @at-root &-inner {
         color: $tooltip-font-color;
         background-color: $tooltip-background-color;
+		border: $global-border-width $global-border-style $tooltip-border-color;
+		@include box-shadow($value: 0 5px 10px rgba(0, 0, 0, 0.2));
     }
     &.top &-arrow,
     &.top-left &-arrow,
     &.top-right &-arrow {
-        border-top-color: $tooltip-background-color;
+        border-top-color: $tooltip-border-color;
     }
     &.right &-arrow {
-        border-right-color: $tooltip-background-color;
+        border-right-color: $tooltip-border-color;
     }
     &.left &-arrow {
-        border-left-color: $tooltip-background-color;
+        border-left-color: $tooltip-border-color;
     }
     &.bottom &-arrow,
     &.bottom-left &-arrow, 
     &.bottom-right &-arrow {
-        border-bottom-color: $tooltip-background-color;
+        border-bottom-color: $tooltip-border-color;
     }
   }
 
