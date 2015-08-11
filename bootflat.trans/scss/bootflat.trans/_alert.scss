@@ -35,6 +35,7 @@ $alert-link-color:              $mediumgray-light !default;
 
       @at-root &-default {
           border: $alert-default $global-border-style $global-border-width;
+		  color: $alert-default;
 
           &.alert-dismissable .close {
 			color: $alert-default;
@@ -43,6 +44,7 @@ $alert-link-color:              $mediumgray-light !default;
 
       @at-root &-info {
           border: $alert-info $global-border-style $global-border-width;
+		  color: $alert-info;
 
           &.alert-dismissable .close {
 			color: $alert-info;
@@ -51,6 +53,7 @@ $alert-link-color:              $mediumgray-light !default;
       
       @at-root &-warning {
           border: $alert-warning $global-border-style $global-border-width;
+		  color: $alert-warning;
 
           &.alert-dismissable .close {
 			color: $alert-warning;
@@ -67,6 +70,7 @@ $alert-link-color:              $mediumgray-light !default;
       
       @at-root &-success {
           border: $alert-success $global-border-style $global-border-width;
+		  color: $alert-success;
 
           &.alert-dismissable .close {
 			color: $alert-success;

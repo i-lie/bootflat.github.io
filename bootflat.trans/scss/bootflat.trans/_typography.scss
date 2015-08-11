@@ -122,6 +122,35 @@ $image-radius:               4px !default;
     margin: 24px 0;
   }
 
+  .text {
+	&-normal {
+		color: $global-color-normal;
+	}
+	
+	&-default {
+		color: $global-color-default;
+	}
+	
+	&-primary {
+		color: $global-color-primary;
+	}
+	
+	&-success {
+		color: $global-color-success;
+	}
+	
+	&-danger {
+		color: $global-color-danger;
+	}
+	
+	&-warning {
+		color: $global-color-warning;
+	}
+	
+	&-info {
+		color: $global-color-info;
+	}
+  }
 }
 
 
