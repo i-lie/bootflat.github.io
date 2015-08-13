@@ -8,13 +8,13 @@ $button-danger:                  $global-color-danger !default;
 $button-warning:                 $global-color-warning !default;
 $button-info:                    $global-color-info !default;
 
-$button-normal-hover:            $darkgray-light !default;
-$button-default-hover:           $darkgray-dark !default;
-$button-primary-hover:           $aqua-light !default;
-$button-success-hover:           $grass-light !default;
-$button-danger-hover:            $grapefruit-light !default;
-$button-warning-hover:           $sunflower-light !default;
-$button-info-hover:              $mint-light !default;
+$button-normal-hover:            $button-normal !default;
+$button-default-hover:           $button-default !default;
+$button-primary-hover:           $button-primary !default;
+$button-success-hover:           $button-success !default;
+$button-danger-hover:            $button-danger !default;
+$button-warning-hover:           $button-warning !default;
+$button-info-hover:              $button-info !default;
 
 $button-font-color-dark:         $global-font-color !default;
 $button-font-color-light:        $global-font-color-light !default;
@@ -34,7 +34,7 @@ $button-trans-background:		 transparent;
    */
   .btn {
 	background-color: $button-trans-background;
- 	color: $button-font-color-dark;
+ 	color: $button-normal;
    	border-color: $button-normal;
 
     &,
@@ -46,7 +46,7 @@ $button-trans-background:		 transparent;
     &:focus,
     &:active,
     &.active {
-        color: $button-font-color-light;
+        color: $button-font-color-dark;
         border-color: $button-normal-hover;
         background-color: $button-normal-hover; 
         outline: none !important;     
@@ -61,33 +61,36 @@ $button-trans-background:		 transparent;
     }
 
     @at-root &-link {
-      &,
-      &:hover, 
-      &:focus, 
-      &:active, 
-      &.active,
-      &.disabled,
-      &[disabled] {
-          border-color: transparent;
-          @include box-shadow($value: none);
-      }
-      &:hover, 
-      &:focus {
-          text-decoration: underline;
-          background-color: transparent;
-          color: $button-default;
-      }
+		&,
+		&:hover, 
+		&:focus, 
+		&:active, 
+		&.active,
+		&.disabled,
+		&[disabled] {
+			color: $button-default;
+			border-color: transparent;
+			@include box-shadow($value: none);
+		}
+		&:hover, 
+		&:focus {
+			text-decoration: underline;
+			background-color: transparent;
+			color: $button-default;
+		}
     }
 
     @at-root &-default {
+		color: $button-default;
         border-color: $button-default; 
 
         &:hover, 
         &:focus,
         &:active, 
         &.active {
+			color: $button-font-color-light;
             border-color: $button-default-hover;
-            background-color: $button-default-hover;           
+            background-color: $button-default-hover;         
         } 
         &,
         &.disabled,
@@ -102,18 +105,20 @@ $button-trans-background:		 transparent;
     }
 
     @at-root &-primary {
-      &, 
-      &:active, 
-      &.active,
-      &.disabled,
-      &[disabled] {
-          border-color: $button-primary;
-      }
-      &:hover, 
-      &:focus {
-          border-color: $button-primary-hover;
-          background-color: $button-primary-hover;         
-      }
+		&, 
+		&:active, 
+		&.active,
+		&.disabled,
+		&[disabled] {
+			color: $button-primary;
+			border-color: $button-primary;
+		}
+		&:hover, 
+		&:focus {
+			color: $button-font-color-light;
+			border-color: $button-primary-hover;
+			background-color: $button-primary-hover;         
+		}
     }
     @at-root .open .dropdown-toggle.btn-primary {
         border-color: $button-primary-hover;
@@ -121,18 +126,20 @@ $button-trans-background:		 transparent;
     }
 
     @at-root &-info {
-      &, 
-      &:active, 
-      &.active, 
-      &.disabled,
-      &[disabled] {
-          border-color: $button-info;
-      }
-      &:hover, 
-      &:focus {
-          border-color: $button-info-hover;
-          background-color: $button-info-hover;           
-      }
+		&, 
+		&:active, 
+		&.active, 
+		&.disabled,
+		&[disabled] {
+			color: $button-info;
+			border-color: $button-info;
+		}
+		&:hover, 
+		&:focus {
+			color: $button-font-color-light;
+			border-color: $button-info-hover;
+			background-color: $button-info-hover;           
+		}
     }
     @at-root .open .dropdown-toggle.btn-info {
         border-color: $button-info-hover;
@@ -140,18 +147,20 @@ $button-trans-background:		 transparent;
     }
 
     @at-root &-success {
-      &, 
-      &:active, 
-      &.active, 
-      &.disabled,
-      &[disabled] {
-          border-color: $button-success;
-      }
-      &:hover, 
-      &:focus {
-          border-color: $button-success-hover;
-          background-color: $button-success-hover;           
-      }
+		&, 
+		&:active, 
+		&.active, 
+		&.disabled,
+		&[disabled] {
+			color: $button-success;
+			border-color: $button-success;
+		}
+		&:hover, 
+		&:focus {
+			color: $button-font-color-light;
+			border-color: $button-success-hover;
+			background-color: $button-success-hover;           
+		}
     }
     @at-root .open .dropdown-toggle.btn-success {
         border-color: $button-success-hover;
@@ -159,18 +168,20 @@ $button-trans-background:		 transparent;
     }
 
     @at-root &-warning {
-      &, 
-      &:active, 
-      &.active, 
-      &.disabled,
-      &[disabled] {
-          border-color: $button-warning;
-      }
-      &:hover, 
-      &:focus {
-          border-color: $button-warning-hover;
-          background-color: $button-warning-hover;          
-      }
+		&, 
+		&:active, 
+		&.active, 
+		&.disabled,
+		&[disabled] {
+			color: $button-warning;
+			border-color: $button-warning;
+		}
+		&:hover, 
+		&:focus {
+			color: $button-font-color-light;
+			border-color: $button-warning-hover;
+			background-color: $button-warning-hover;          
+		}
     }
     @at-root .open .dropdown-toggle.btn-warning {
         border-color: $button-warning-hover;
@@ -178,19 +189,21 @@ $button-trans-background:		 transparent;
     }
 
     @at-root &-danger {
-      &, 
-      &:active, 
-      &.active, 
-      &.disabled,
-      &[disabled],
-      .open .dropdown-toggle.btn {
-          border-color: $button-danger;
-      }
-      &:hover, 
-      &:focus {
-          border-color: $button-danger-hover;
-          background-color: $button-danger-hover;           
-      }
+		&, 
+		&:active, 
+		&.active, 
+		&.disabled,
+		&[disabled],
+		.open .dropdown-toggle.btn {
+			color: $button-danger;
+			border-color: $button-danger;
+		}
+		&:hover, 
+		&:focus {
+			color: $button-font-color-light;
+			border-color: $button-danger-hover;
+			background-color: $button-danger-hover;           
+		}
     }
     @at-root .open .dropdown-toggle.btn-danger {
         border-color: $button-danger-hover;
