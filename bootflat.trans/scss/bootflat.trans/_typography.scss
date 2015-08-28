@@ -150,6 +150,142 @@ $image-radius:               4px !default;
 	&-info {
 		color: $global-color-info;
 	}
+	
+	&-color {
+		&-bluejeans {
+			&-dark {
+				color: $bluejeans-dark;
+			}
+			&-light {
+				color: $bluejeans-light;
+			}
+		}
+		&-aqua {
+			&-dark {
+				color: $aqua-dark;
+			}
+			&-light {
+				color: $aqua-light;
+			}
+		}
+		&-mint {
+			&-dark {
+				color: $mint-dark;
+			}
+			&-light {
+				color: $mint-light;
+			}
+		}
+		&-grass {
+			&-dark {
+				color: $grass-dark;
+			}
+			&-light {
+				color: $grass-light;
+			}
+		}
+		&-sunflower {
+			&-dark {
+				color: $sunflower-dark;
+			}
+			&-light {
+				color: $sunflower-light;
+			}
+		}
+		&-bittersweet {
+			&-dark {
+				color: $bittersweet-dark;
+			}
+			&-light {
+				color: $bittersweet-light;
+			}
+		}
+		&-grapefruit {
+			&-dark {
+				color: $grapefruit-dark;
+			}
+			&-light {
+				color: $grapefruit-light;
+			}
+		}
+		&-lavender {
+			&-dark {
+				color: $lavender-dark;
+			}
+			&-light {
+				color: $lavender-light;
+			}
+		}
+		&-pinkrose {
+			&-dark {
+				color: $pinkrose-dark;
+			}
+			&-light {
+				color: $pinkrose-light;
+			}
+		}
+		&-lightgray {
+			&-dark {
+				color: $lightgray-dark;
+			}
+			&-light {
+				color: $lightgray-light;
+			}
+		}
+		&-mediumgray {
+			&-dark {
+				color: $mediumgray-dark;
+			}
+			&-light {
+				color: $mediumgray-light;
+			}
+		}
+		&-darkgray {
+			&-dark {
+				color: $darkgray-dark;
+			}
+			&-light {
+				color: $darkgray-light;
+			}
+		}
+	}
+  }
+  
+  .bg {
+	&-normal {
+		background-color: $global-color-normal;
+		color: $global-font-color;
+	}
+	
+	&-default {
+		background-color: $global-color-default;
+		color: $global-font-color-light;
+	}
+	
+	&-primary {
+		background-color: $global-color-primary;
+		color: $global-font-color-light;
+	}
+	
+	&-success {
+		background-color: $global-color-success;
+		color: $global-font-color-light;
+	}
+	
+	&-danger {
+		background-color: $global-color-danger;
+		color: $global-font-color-light;
+	}
+	
+	&-warning {
+		background-color: $global-color-warning;
+		color: $global-font-color-light;
+	}
+	
+	&-info {
+		background-color: $global-color-info;
+		color: $global-font-color-light;
+	}
   }
 }
 
