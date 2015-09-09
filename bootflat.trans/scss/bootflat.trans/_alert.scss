@@ -23,6 +23,7 @@ $alert-link-color:              $mediumgray-light !default;
   .alert {
       background-color: transparent;
       border: $alert-normal $global-border-style $global-border-width;
+      @include radius();
 
       & h4 {
           margin-bottom: 10px;

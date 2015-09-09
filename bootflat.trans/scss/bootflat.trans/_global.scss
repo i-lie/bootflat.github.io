@@ -62,7 +62,7 @@ $global-font-color-light:		$white !global;
 $global-font-color-disabled:	$mediumgray-dark !global;
 
 $global-border-color:			$lightgray-dark !global;
-$global-border-radius:			4px !global;
+$global-border-radius:			0px !global;
 $global-border-style:			solid !global;
 $global-border-width:			1px !global;
 $global-border:					$global-border-width $global-border-style $global-border-color !global;
@@ -145,7 +145,7 @@ $global-border:					$global-border-width $global-border-style $global-border-col
 }
 
 // We use this to control border radius.
-@mixin radius($type: border-radius, $value: $global-radius) {	
+@mixin radius($type: border-radius, $value: $global-border-radius) {	
 	@include prefixer($property: $type, $value: $value, $prefixes: webkit moz spec);	
 }
 

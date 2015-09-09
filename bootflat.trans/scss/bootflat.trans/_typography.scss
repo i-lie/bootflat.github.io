@@ -8,8 +8,6 @@ $link-font-color-hover:      $aqua-light !default;
 
 $blockquote-border-color:    $mediumgray-light !default;
 
-$image-radius:               4px !default;
-
 // Exports
 //------------------------------------------------------
 
@@ -113,7 +111,7 @@ $image-radius:               4px !default;
     border-left: 3px solid $blockquote-border-color;
   }
   .img-rounded {
-    @include radius($type: border-radius, $value: $image-radius);
+    @include radius();
   }
   .img-comment {
     font-size: 15px;

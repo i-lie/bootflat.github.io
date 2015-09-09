@@ -36,6 +36,7 @@ $button-trans-background:		 transparent;
 	background-color: $button-trans-background;
  	color: $button-normal;
    	border-color: $button-normal;
+   	@include radius();
 
     &,
     &.disabled, 

@@ -21,6 +21,7 @@ $progress-background-color:        transparent !default;
   .progress {
 		background-color: $progress-background-color;
 		@include box-shadow($value: none);
+		@include radius();
 
 		&-bar {
 			background-color: $progress-normal;
