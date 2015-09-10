@@ -3,7 +3,6 @@
 $pagination-background-color:                  transparent !default;
 $pagination-background-color-hover:            $global-font-color !default;
 $pagination-background-color-active:           $global-font-color !default;
-$pagination-border-color:					   $pagination-background-color-hover !default;
 
 $pagination-font-color:                        $global-font-color !default;
 $pagination-font-color-hover:                  $white !default;
@@ -40,15 +39,15 @@ $pagination-font-color-disabled:               $global-font-color-disabled !defa
 			& > span {
 				color: $pagination-font-color;
 				background-color: $pagination-background-color;
-				border: none;
+				border: $global-border-width $global-border-style $pagination-background-color;
+				margin-left: 0;
 			}
 			
 			& > a:hover,
 			& > span:hover,
 			& > a:focus,
 			& > span:focus {
-				color: $pagination-font-color-hover;
-				background-color: $pagination-background-color-hover;
+				background-color: $pagination-background-color;
 				border-color: $pagination-background-color-hover;
 			}
 		}
@@ -71,7 +70,7 @@ $pagination-font-color-disabled:               $global-font-color-disabled !defa
 		& > .disabled > a:focus {
 			color: $pagination-font-color-disabled;
 			background-color: $pagination-background-color;
-			border-color: $pagination-border-color;
+			border-color: $pagination-background-color;
 		}
 	}
 }

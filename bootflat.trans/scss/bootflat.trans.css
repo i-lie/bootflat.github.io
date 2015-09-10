@@ -589,10 +589,10 @@ blockquote {
 .pagination > li > a, .pagination > li > span {
   color: #434A54;
   background-color: transparent;
-  border: none; }
+  border: 1px solid transparent;
+  margin-left: 0; }
 .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
-  color: #FFF;
-  background-color: #434A54;
+  background-color: transparent;
   border-color: #434A54; }
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
   color: #FFF;
@@ -601,7 +601,7 @@ blockquote {
 .pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus {
   color: #AAB2BD;
   background-color: transparent;
-  border-color: #434A54; }
+  border-color: transparent; }
 
 /**
  * pager
