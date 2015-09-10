@@ -20,6 +20,7 @@ $popover-border-color:					 $popover-font-color !default;
       background-color: $popover-background-color;
       color: $popover-font-color;
       border-color: $popover-border-color;
+      @include radius();
 
       @at-root &-title {
           font-weight: bold;

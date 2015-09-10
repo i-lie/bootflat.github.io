@@ -28,6 +28,7 @@ $dropdown-font-weight:                    700 !default;
   .dropdown-menu {
       border: none;
       background-color: $dropdown-background-color;
+      @include radius();
 
       & .dropdown-header {
           padding: $dropdown-padding;

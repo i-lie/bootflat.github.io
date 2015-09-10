@@ -4,7 +4,6 @@ $accordion-border-color:                       $lightgray-dark !default;
 
 $accordion-panel-font-color:                   $darkgray-dark !default;
 $accordion-panel-font-color-hover:             $mediumgray-dark !default;
-$accordion-panel-radius:                       4px !default;
 
 $accordion-panel-shadow:                       0 1px 2px rgba(0, 0, 0, .2) !default;
 
@@ -23,9 +22,9 @@ $accordion-panel-background-color:             $white !default;
    */
   .panel-group {
     & .panel {
-      @include radius($type: border-radius, $value: 0);
       background-color: transparent;
       @include box-shadow($value: none);
+      @include radius();
     }
     & .panel+.panel {
       margin-top: 0;
@@ -50,10 +49,10 @@ $accordion-panel-background-color:             $white !default;
       @include box-shadow($value: $accordion-panel-shadow);
     }
     & .panel:first-child {
-      @include radius($type: border-radius, $value: $accordion-panel-radius $accordion-panel-radius 0 0);
+      @include radius();
     }
     & .panel:last-child {
-      @include radius($type: border-radius, $value: 0 0 $accordion-panel-radius $accordion-panel-radius);
+      @include radius();
       border-bottom: none;
     }
     & .panel-heading+.panel-collapse .panel-body {
