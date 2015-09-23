@@ -24,6 +24,7 @@ $pill-font-color-active:              $white !default;
       }
       & > li > a {
           color: $pill-background-color;
+          @include radius();
       }
       & > li > a:hover {
           color: $pill-font-color;    

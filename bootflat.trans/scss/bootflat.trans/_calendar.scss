@@ -5,7 +5,7 @@ $calendar-font-color:                  $white !default;
 $calendar-current-color:               $bittersweet-dark !default;
 
 $calendar-shadow:					   0 1px 2px rgba(0, 0, 0, .2) !default;
-$calendar-radius:                      4px !default;
+$calendar-radius:                      $global-border-radius !default;
 
 
 
@@ -20,7 +20,7 @@ $calendar-radius:                      4px !default;
    */
 	.calendar {
 		padding: 20px;
-		@include radius($type: border-radius, $value: $calendar-radius);
+		@include radius($value: $calendar-radius);
 		color: $white;
 		background-color: lighten($calendar-background-color, 10%);
 		@include box-shadow($value: $calendar-shadow);
