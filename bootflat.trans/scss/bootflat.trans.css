@@ -843,7 +843,6 @@ blockquote {
   /* 'Disabled' State */
   /* Scroller Support */ }
   .selecter .selecter-element {
-    display: none;
     *left: -999999px;
     height: 100%;
     left: 0;
